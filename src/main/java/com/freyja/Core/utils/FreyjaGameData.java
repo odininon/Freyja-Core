@@ -1,4 +1,4 @@
-package com.freyja.Core.utils;
+package com.freyja.core.utils;
 
 import com.google.common.base.Function;
 import com.google.common.collect.ImmutableTable;
@@ -39,7 +39,6 @@ public class FreyjaGameData {
         ItemData itemData = new ItemData(item, mc);
 
         idMap.put(item.itemID, itemData);
-
     }
 
     public static void buildModObjectTable()
@@ -48,13 +47,13 @@ public class FreyjaGameData {
             throw new IllegalStateException("Illegal call to buildModObjectTable!");
         }
 
-        Map<Integer, Table.Cell<String, String, Integer>> map = Maps.transformValues(idMap, new Function<ItemData, Table.Cell<String, String, Integer>>() {
-            public Table.Cell<String, String, Integer> apply(ItemData data)
+        Map<Integer, Integer> map = Maps.transformValues(idMap, new Function<ItemData,Integer>() {
+            public Table.Cell<String, Integer> apply(ItemData data)
             {
                 if ("Minecraft".equals(data.getModId())) {
                     return null;
                 }
-                return Tables.immutableCell(data.getModId(), data.getItemType(), data.getItemId());
+                return Tables.immutableCell(data.getModId(), data.getItemId());
             }
         });
 

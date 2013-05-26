@@ -1,16 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>mods.freyja</groupId>
+    <groupId>com.aesireanempire.freyja</groupId>
     <artifactId>Freyja-Core</artifactId>
     <version>0.0.1</version>
     <name>Freyja-Core</name>
+    <packaging>jar</packaging>
     <url>https://github.com/odininon/Freyja-Core</url>
 
     <parent>
         <groupId>net.md-5</groupId>
         <artifactId>ForgeMod</artifactId>
-        <version>1.5.1-7.7.2-SNAPSHOT</version>
+        <version>1.5.2-7.8.0-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -29,8 +30,8 @@
         <url>https://github.com/odininon/Freyja-Core/issues</url>
     </issueManagement>
 
-    <repositories>
-        <repository>
+    <!-- <pluginRepositories>
+        <pluginRepository>
             <id>sonatype-oss-public</id>
             <url>https://oss.sonatype.org/content/groups/public</url>
             <releases>
@@ -39,8 +40,8 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>
-    </repositories>
+        </pluginRepository>
+    </pluginRepositories> -->
 
     <build>
         <finalName>${project.artifactId}-${buildVersion}</finalName>

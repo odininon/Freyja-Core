@@ -1,4 +1,4 @@
-package com.freyja.Core;
+package com.freyja.core;
 
 import cpw.mods.fml.relauncher.IClassTransformer;
 import org.objectweb.asm.ClassReader;
@@ -40,7 +40,7 @@ public class FreyjaCoreTransformer implements IClassTransformer {
             MethodNode moddedMethod = vanillaMethod;
             AbstractInsnNode last = moddedMethod.instructions.getLast().getPrevious().getPrevious().getPrevious();
             moddedMethod.instructions.insertBefore(last, new VarInsnNode(Opcodes.ALOAD, 0));
-            moddedMethod.instructions.insertBefore(last, new MethodInsnNode(Opcodes.INVOKESTATIC, "com/freyja/Core/utils/FreyjaGameData", "newItemAdded", "(Lnet/minecraft/item/Item;)V"));
+            moddedMethod.instructions.insertBefore(last, new MethodInsnNode(Opcodes.INVOKESTATIC, "com/freyja/core/utils/FreyjaGameData", "newItemAdded", "(Lnet/minecraft/item/Item;)V"));
 
             classNode.methods.remove(vanillaMethod);
             moddedMethod.accept(classNode);

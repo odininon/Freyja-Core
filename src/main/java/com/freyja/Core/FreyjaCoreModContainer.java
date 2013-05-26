@@ -1,4 +1,4 @@
-package com.freyja.Core;
+package com.freyja.core;
 
 import com.google.common.eventbus.EventBus;
 import cpw.mods.fml.common.DummyModContainer;

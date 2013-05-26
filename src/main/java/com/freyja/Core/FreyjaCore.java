@@ -1,4 +1,4 @@
-package com.freyja.Core;
+package com.freyja.core;
 
 import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 
@@ -9,7 +9,7 @@ import java.util.Map;
  *         Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 
-@IFMLLoadingPlugin.TransformerExclusions("com.freyja.Core")
+@IFMLLoadingPlugin.TransformerExclusions("com.freyja.core")
 public class FreyjaCore implements IFMLLoadingPlugin {
 
     public FreyjaCore() {}
@@ -23,13 +23,13 @@ public class FreyjaCore implements IFMLLoadingPlugin {
     @Override
     public String[] getASMTransformerClass()
     {
-        return new String[]{"com.freyja.Core.FreyjaCoreTransformer"};
+        return new String[]{"com.freyja.core.FreyjaCoreTransformer"};
     }
 
     @Override
     public String getModContainerClass()
     {
-        return "com.freyja.Core.FreyjaCoreModContainer";
+        return "com.freyja.core.FreyjaCoreModContainer";
     }
 
     @Override
