@@ -9,7 +9,7 @@ import java.util.Map;
  *         Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 
-@IFMLLoadingPlugin.TransformerExclusions("com.freyja.core")
+@IFMLLoadingPlugin.TransformerExclusions("com.freyja")
 public class FreyjaCore implements IFMLLoadingPlugin {
 
     public FreyjaCore() {}
