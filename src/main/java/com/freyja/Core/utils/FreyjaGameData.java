@@ -34,4 +34,9 @@ public class FreyjaGameData {
         }
     }
 
+    public static HashMap getMap()
+    {
+        return idMap;
+    }
+
 }
